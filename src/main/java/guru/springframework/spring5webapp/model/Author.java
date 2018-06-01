@@ -19,8 +19,7 @@ public class Author {
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books  = new HashSet<>();
 
-    public Author(){
-
+    public Author() {
     }
 
     public Author(String firstName, String lastName) {
@@ -65,5 +64,4 @@ public class Author {
     public void setBooks(Set<Book> books) {
         this.books = books;
     }
-
 }
