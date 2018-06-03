@@ -82,14 +82,19 @@ public class Book {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Book book = (Book) o;
-        return Objects.equals(id, book.id);
+
+        // replace originally generated code with instructor code
+        //return Objects.equals(id, author.id);
+        return id != null ? id.equals(book.id) : book.id == null;
     }
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(id);
+        // replace originally generated code with instructor code
+        //return Objects.hash(id);
+        return id != null ? id.hashCode() : 0;
     }
 
     @Override
